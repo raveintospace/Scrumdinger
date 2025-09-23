@@ -6,14 +6,19 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct ScrumdingerApp: App {
-    @State private var scrums = DailyScrum.sampleData
-    
     var body: some Scene {
         WindowGroup {
-            ScrumsView(scrums: $scrums)
+            ScrumsView()
         }
+        .modelContainer(for: DailyScrum.self)
     }
 }
+
+/*
+ Setting the model container injects a model context into the SwiftUI environment.
+ This context manages changes to the in-memory model objects, propagate changes to SwiftUI, and write changes to disk when appropriate.
+ */
