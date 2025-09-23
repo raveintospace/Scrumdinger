@@ -35,17 +35,10 @@ struct MeetingView: View {
         .padding()
         .foregroundStyle(scrum.theme.accentColor)
         .onAppear {
-            scrumTimer.reset(
-                lengthInMinutes: scrum.lengthInMinutes,
-                attendeeNames: scrum.attendees.map { $0.name })
-            scrumTimer.speakerChangedAction = {
-                player.seek(to: .zero)
-                player.play()
-            }
-            scrumTimer.startScrum()
+            startScrum()
         }
         .onDisappear {
-            scrumTimer.stopScrum()
+            endScrum()
         }
         .navigationBarTitleDisplayMode(.inline)
     }
@@ -54,4 +47,23 @@ struct MeetingView: View {
 #Preview {
     @Previewable @State var scrum = DailyScrum.sampleData[0]
     MeetingView(scrum: $scrum)
+}
+
+extension MeetingView {
+    private func startScrum() {
+        scrumTimer.reset(
+            lengthInMinutes: scrum.lengthInMinutes,
+            attendeeNames: scrum.attendees.map { $0.name })
+        scrumTimer.speakerChangedAction = {
+            player.seek(to: .zero)
+            player.play()
+        }
+        scrumTimer.startScrum()
+    }
+    
+    private func endScrum() {
+        scrumTimer.stopScrum()
+        let newHistory = History(attendees: scrum.attendees)
+        scrum.history.insert(newHistory, at: 0)
+    }
 }
