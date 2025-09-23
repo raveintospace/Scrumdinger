@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		342DFF722E828ABF00AC7B93 /* ThemeKit in Frameworks */ = {isa = PBXBuildFile; productRef = 342DFF712E828ABF00AC7B93 /* ThemeKit */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		344F4EAC2E82828400B351B2 /* Scrumdinger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scrumdinger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				342DFF722E828ABF00AC7B93 /* ThemeKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +70,7 @@
 			);
 			name = Scrumdinger;
 			packageProductDependencies = (
+				342DFF712E828ABF00AC7B93 /* ThemeKit */,
 			);
 			productName = Scrumdinger;
 			productReference = 344F4EAC2E82828400B351B2 /* Scrumdinger.app */;
@@ -94,6 +100,9 @@
 			);
 			mainGroup = 344F4EA32E82828400B351B2;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				342DFF702E828ABF00AC7B93 /* XCLocalSwiftPackageReference "../ThemeKit" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 344F4EAD2E82828400B351B2 /* Products */;
 			projectDirPath = "";
@@ -253,6 +262,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "Scrumdinger/Preview\\ Content";
 				DEVELOPMENT_TEAM = 4XAMG487KR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -285,6 +295,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "Scrumdinger/Preview\\ Content";
 				DEVELOPMENT_TEAM = 4XAMG487KR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -332,6 +343,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		342DFF702E828ABF00AC7B93 /* XCLocalSwiftPackageReference "../ThemeKit" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../ThemeKit;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		342DFF712E828ABF00AC7B93 /* ThemeKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ThemeKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 344F4EA42E82828400B351B2 /* Project object */;
 }
