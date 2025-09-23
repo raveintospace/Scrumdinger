@@ -118,3 +118,5 @@ extension DetailEditView {
         try? context.save()
     }
 }
+
+// to follow on wednesday https://developer.apple.com/tutorials/app-dev-training/handling-errors

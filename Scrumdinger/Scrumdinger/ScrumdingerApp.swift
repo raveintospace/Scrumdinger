@@ -1,7 +1,7 @@
 //
 //  ScrumdingerApp.swift
 //  Scrumdinger
-//
+//  https://developer.apple.com/tutorials/app-dev-training/getting-started-with-scrumdinger
 //  Created by Uri on 23/9/25.
 //
 
