@@ -80,7 +80,8 @@ extension MeetingView {
         scrumTimer.stopScrum()
         speechRecognizer.stopTranscribing()
         isRecording = false
-        let newHistory = History(attendees: scrum.attendees)
+        let newHistory = History(attendees: scrum.attendees,
+                                 transcript: speechRecognizer.transcript)
         scrum.history.insert(newHistory, at: 0)
         try context.save()
     }
