@@ -1,2 +1,4 @@
 # Scrumdinger
-Apple's App Dev Tutorial based on SwiftUI
+Apple's App Dev Tutorial using SwiftUI & XCode 16 -> https://developer.apple.com/tutorials/app-dev-training
+
+
