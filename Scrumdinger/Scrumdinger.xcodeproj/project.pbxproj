@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		342DFF722E828ABF00AC7B93 /* ThemeKit in Frameworks */ = {isa = PBXBuildFile; productRef = 342DFF712E828ABF00AC7B93 /* ThemeKit */; };
 		342DFF8F2E82D18F00AC7B93 /* TimerKit in Frameworks */ = {isa = PBXBuildFile; productRef = 342DFF8E2E82D18F00AC7B93 /* TimerKit */; };
+		3457A1E02E83ED75005467AB /* TranscriptionKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3457A1DF2E83ED75005467AB /* TranscriptionKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 			files = (
 				342DFF722E828ABF00AC7B93 /* ThemeKit in Frameworks */,
 				342DFF8F2E82D18F00AC7B93 /* TimerKit in Frameworks */,
+				3457A1E02E83ED75005467AB /* TranscriptionKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +76,7 @@
 			packageProductDependencies = (
 				342DFF712E828ABF00AC7B93 /* ThemeKit */,
 				342DFF8E2E82D18F00AC7B93 /* TimerKit */,
+				3457A1DF2E83ED75005467AB /* TranscriptionKit */,
 			);
 			productName = Scrumdinger;
 			productReference = 344F4EAC2E82828400B351B2 /* Scrumdinger.app */;
@@ -106,6 +109,7 @@
 			packageReferences = (
 				342DFF702E828ABF00AC7B93 /* XCLocalSwiftPackageReference "../ThemeKit" */,
 				342DFF8D2E82D18F00AC7B93 /* XCLocalSwiftPackageReference "../TimerKit" */,
+				3457A1DE2E83ED75005467AB /* XCLocalSwiftPackageReference "../TranscriptionKit" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 344F4EAD2E82828400B351B2 /* Products */;
@@ -270,6 +274,8 @@
 				DEVELOPMENT_TEAM = 4XAMG487KR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Audio is recorded to transcribe the meeting. Audio recordings are discarded after transcription.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "You can view a text transcription of your meeting in the app.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -283,6 +289,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.quarantasis.Scrumdinger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -303,6 +312,8 @@
 				DEVELOPMENT_TEAM = 4XAMG487KR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Audio is recorded to transcribe the meeting. Audio recordings are discarded after transcription.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "You can view a text transcription of your meeting in the app.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -316,6 +327,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.quarantasis.Scrumdinger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -357,6 +371,10 @@
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../TimerKit;
 		};
+		3457A1DE2E83ED75005467AB /* XCLocalSwiftPackageReference "../TranscriptionKit" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../TranscriptionKit;
+		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -367,6 +385,10 @@
 		342DFF8E2E82D18F00AC7B93 /* TimerKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = TimerKit;
+		};
+		3457A1DF2E83ED75005467AB /* TranscriptionKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TranscriptionKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
