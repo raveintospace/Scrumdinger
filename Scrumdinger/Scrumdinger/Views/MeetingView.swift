@@ -10,12 +10,15 @@ import SwiftData
 import ThemeKit
 import TimerKit
 import AVFoundation
+import TranscriptionKit
 
 struct MeetingView: View {
     let scrum: DailyScrum
     
     @Environment(\.modelContext) private var context
     @State var scrumTimer = ScrumTimer()
+    @State var speechRecognizer = SpeechRecognizer()
+    @State private var isRecording = false
     @Binding var errorWrapper: ErrorWrapper?
     
     private let player = AVPlayer.dingPlayer()
@@ -30,7 +33,7 @@ struct MeetingView: View {
                                   secondsRemaining: scrumTimer.secondsRemaining,
                                   theme: scrum.theme)
                 
-                MeetingTimerView(speakers: scrumTimer.speakers, theme: scrum.theme)
+                MeetingTimerView(speakers: scrumTimer.speakers, theme: scrum.theme, isRecording: isRecording)
                 
                 MeetingFooterView(speakers: scrumTimer.speakers, skipAction: scrumTimer.skipSpeaker)
             }
@@ -67,11 +70,16 @@ extension MeetingView {
             player.seek(to: .zero)
             player.play()
         }
+        speechRecognizer.resetTranscript()
+        speechRecognizer.startTranscribing()
+        isRecording = true
         scrumTimer.startScrum()
     }
     
     private func endScrum() throws {
         scrumTimer.stopScrum()
+        speechRecognizer.stopTranscribing()
+        isRecording = false
         let newHistory = History(attendees: scrum.attendees)
         scrum.history.insert(newHistory, at: 0)
         try context.save()
